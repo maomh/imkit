@@ -1,10 +1,9 @@
-Run
+Try
 ```
-swift run imkit
-```
-
-build release
-```
-swift build -c release
+make try
 ```
 
+Install
+```
+make && make install
+```

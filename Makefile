@@ -8,6 +8,12 @@ build:
 dev:
 	swift build
 
+try:
+	@echo "Try to run ..."
+	@echo "    $(EXECUTABLE_NAME) --help"
+	@echo ""
+	swift run $(EXECUTABLE_NAME) --help
+
 update:
 	swift package update
 

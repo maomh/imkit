@@ -8,7 +8,7 @@ import ArgumentParser
 import AppKit
 
 @main
-struct ImKit: ParsableCommand {
+struct Imkit: ParsableCommand {
     @Flag(help: "Use default ABC input method.")
     var abc = false
 
