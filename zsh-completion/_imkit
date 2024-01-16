@@ -1,0 +1,21 @@
+#compdef imkit
+
+_arguments \
+    - set1 \
+    {-h,--help}'[show help infomation]' \
+    - set2 \
+    {-l,--list-all}'[list all input methods that could be used.]' \
+    - set3 \
+    --abc'[change input method to ABC]' \
+    - set4 \
+    --pinyin'[change input method to 拼音]' \
+    - set5 \
+    {-s,--select}'[select input method to active.]:::->ims-comp'
+
+case "$state" in
+    (ims-comp)
+        local -a ims
+        ims=(`imkit -l`)
+        _values input-methods $ims
+        ;;
+esac
